@@ -38,6 +38,7 @@ task unpack(type: Copy) {
 }
 docker {
     name "may12th2019/test"
+    tag "new"
     copySpec.from(tasks.unpack.outputs).into("dependency")
     buildArgs(['DEPENDENCY': "dependency"])
 }
